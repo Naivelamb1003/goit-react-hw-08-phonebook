@@ -69,4 +69,6 @@ const current = () => async (dispatch, getState) => {
   }
 };
 
-export default { signup, login, logout, current };
+const authOperations = { signup, login, logout, current };
+
+export default authOperations;
