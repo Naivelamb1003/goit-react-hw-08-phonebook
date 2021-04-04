@@ -2,7 +2,6 @@ import { Button, TextField } from "@material-ui/core";
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import authOperations from "../redux/auth/auth-operation";
-import { makeStyles } from "@material-ui/core/styles";
 
 class LoginView extends Component {
   state = {
