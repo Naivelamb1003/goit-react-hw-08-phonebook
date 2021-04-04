@@ -1,6 +1,8 @@
+import { Button, TextField } from "@material-ui/core";
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import authOperations from "../redux/auth/auth-operation";
+import { makeStyles } from "@material-ui/core/styles";
 
 class LoginView extends Component {
   state = {
@@ -25,26 +27,38 @@ class LoginView extends Component {
     return (
       <div>
         <h1>Login</h1>
-        <form onSubmit={this.handleSubmit}>
-          <label>
-            Email
-            <input
-              type="email"
-              name="email"
-              value={email}
-              onChange={this.handleChange}
-            />
-          </label>
-          <label>
-            Password
-            <input
-              type="password"
-              name="password"
-              value={password}
-              onChange={this.handleChange}
-            />
-          </label>
-          <button type="Submit">Confirm</button>
+        <form noValidate onSubmit={this.handleSubmit}>
+          <TextField
+            variant="outlined"
+            margin="normal"
+            required
+            fullWidth
+            id="email"
+            label="Email Address"
+            name="email"
+            autoComplete="email"
+            autoFocus
+            type="email"
+            value={email}
+            onChange={this.handleChange}
+          />
+          <TextField
+            variant="outlined"
+            margin="normal"
+            required
+            fullWidth
+            id="password"
+            label="Password"
+            name="password"
+            autoComplete="password"
+            autoFocus
+            type="password"
+            value={password}
+            onChange={this.handleChange}
+          />
+          <Button fullWidth variant="contained" color="primary" type="Submit">
+            Confirm
+          </Button>
         </form>
       </div>
     );

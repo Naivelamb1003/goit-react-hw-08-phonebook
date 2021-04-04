@@ -1,11 +1,18 @@
-  
-import React from 'react';
-import style from './Alert.module.css';
+import React from "react";
+import { connect } from "react-redux";
+import style from "./Alert.module.css";
+import { clearError } from "../../redux/phonebook/phonebook-actions";
 
-export default function Alert({ message }) {
+function Alert({ message, closeError }) {
   return (
-    <div className={style.container}>
+    <div onClick={closeError} className={style.container}>
       <p className={style.text}>{message}</p>
     </div>
   );
 }
+
+const mapDispatchToProps = (dispatch) => ({
+  closeError: () => dispatch(clearError()),
+});
+
+export default connect(null, mapDispatchToProps)(Alert);

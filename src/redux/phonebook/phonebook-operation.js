@@ -14,18 +14,28 @@ import {
 
 axios.defaults.baseURL = "https://goit-phonebook-api.herokuapp.com/";
 
-export const addContact = (namber, telf) => async (dispatch) => {
+const isContactNew = (state, name) => {
+  console.log(state);
+  console.log(name);
+  if (state.map((c) => c.name.toLowerCase()).includes(name.toLowerCase())) {
+    throw new Error("Contact already exist");
+  }
+  return true;
+};
+
+export const addContact = (number, telf) => async (dispatch, getState) => {
   const contact = {
-    name: namber,
+    name: number,
     number: telf,
   };
 
   dispatch(addContactRequest());
 
   try {
-    const response = await axios.post("/contacts", contact);
-
-    dispatch(addContactSuccess(response.data));
+    if (isContactNew(getState().phonebook.contacts, contact.name)) {
+      const response = await axios.post("/contacts", contact);
+      dispatch(addContactSuccess(response.data));
+    }
   } catch (error) {
     dispatch(addContactError(error.message));
   }

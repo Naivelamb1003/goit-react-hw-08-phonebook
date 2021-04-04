@@ -6,6 +6,7 @@ import store from "./redux/store";
 import { BrowserRouter } from "react-router-dom";
 import { Provider } from "react-redux";
 import { PersistGate } from "redux-persist/integration/react";
+import "fontsource-roboto";
 
 ReactDOM.render(
   <React.StrictMode>
