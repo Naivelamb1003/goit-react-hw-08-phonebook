@@ -1,6 +1,8 @@
 import React, { Component } from "react";
+import { Button, TextField } from "@material-ui/core";
 import { connect } from "react-redux";
 import authOperations from "../redux/auth/auth-operation";
+import style from "./RegisterView.module.css";
 
 class RegisterView extends Component {
   state = {
@@ -26,36 +28,60 @@ class RegisterView extends Component {
 
     return (
       <div>
-        <h1>Registration</h1>
-        <form onSubmit={this.handleSubmit}>
-          <label>
-            Name
-            <input
-              type="text"
-              name="name"
-              value={name}
-              onChange={this.handleChange}
-            />
-          </label>
-          <label>
-            Email
-            <input
-              type="text"
-              name="email"
-              value={email}
-              onChange={this.handleChange}
-            />
-          </label>
-          <label>
-            Password
-            <input
-              type="text"
-              name="password"
-              value={password}
-              onChange={this.handleChange}
-            />
-          </label>
-          <button type="submit">Confirm</button>
+        <h1 className={style.title}>Registration</h1>
+        <form onSubmit={this.handleSubmit} className={style.form}>
+          <TextField
+            variant="outlined"
+            margin="normal"
+            required
+            fullWidth
+            id="name"
+            label="Name"
+            name="name"
+            autoComplete="name"
+            autoFocus
+            type="text"
+            value={name}
+            onChange={this.handleChange}
+          />
+
+          <TextField
+            variant="outlined"
+            margin="normal"
+            required
+            fullWidth
+            id="email"
+            label="Email Address"
+            name="email"
+            autoComplete="email"
+            autoFocus
+            type="email"
+            value={email}
+            onChange={this.handleChange}
+          />
+          <TextField
+            variant="outlined"
+            margin="normal"
+            required
+            fullWidth
+            id="password"
+            label="Password"
+            name="password"
+            autoComplete="password"
+            autoFocus
+            type="password"
+            value={password}
+            onChange={this.handleChange}
+          />
+          <Button
+            fullWidth
+            variant="contained"
+            color="primary"
+            type="Submit"
+            className={style.btn}
+          >
+            Confirm
+          </Button>
         </form>
       </div>
     );

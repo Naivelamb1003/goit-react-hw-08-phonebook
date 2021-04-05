@@ -1,0 +1,112 @@
+.contNav {
+  color: #45a0a4;
+  background: -webkit-linear-gradient(
+      right,
+      #e3612c 0,
+      #e3612c 33.3%,
+      #fcce30 33.3%,
+      #fcce30 66.6%,
+      #58554b 66.6%,
+      #58554b
+    )
+    bottom no-repeat;
+  background: -o-linear-gradient(
+      right,
+      #e3612c 0,
+      #e3612c 33.3%,
+      #fcce30 33.3%,
+      #fcce30 66.6%,
+      #58554b 66.6%,
+      #58554b
+    )
+    bottom no-repeat;
+  background: linear-gradient(
+      to right,
+      #e3612c 0,
+      #e3612c 33.3%,
+      #fcce30 33.3%,
+      #fcce30 66.6%,
+      #58554b 66.6%,
+      #58554b
+    )
+    bottom no-repeat;
+  background-size: 70% 5px;
+}
+.contNav:hover {
+  background-size: 100% 5px;
+}
+
+.contUsMen {
+  color: #45a0a4;
+  background: -webkit-linear-gradient(
+      right,
+      #e3612c 0,
+      #e3612c 33.3%,
+      #fcce30 33.3%,
+      #fcce30 66.6%,
+      #58554b 66.6%,
+      #58554b
+    )
+    bottom no-repeat;
+  background: -o-linear-gradient(
+      right,
+      #e3612c 0,
+      #e3612c 33.3%,
+      #fcce30 33.3%,
+      #fcce30 66.6%,
+      #58554b 66.6%,
+      #58554b
+    )
+    bottom no-repeat;
+  background: linear-gradient(
+      to right,
+      #e3612c 0,
+      #e3612c 33.3%,
+      #fcce30 33.3%,
+      #fcce30 66.6%,
+      #58554b 66.6%,
+      #58554b
+    )
+    bottom no-repeat;
+  background-size: 70% 5px;
+}
+.contUsMen:hover {
+  background-size: 100% 5px;
+}
+.contAutNav {
+  color: #45a0a4;
+  background: -webkit-linear-gradient(
+      right,
+      #e3612c 0,
+      #e3612c 33.3%,
+      #fcce30 33.3%,
+      #fcce30 66.6%,
+      #58554b 66.6%,
+      #58554b
+    )
+    bottom no-repeat;
+  background: -o-linear-gradient(
+      right,
+      #e3612c 0,
+      #e3612c 33.3%,
+      #fcce30 33.3%,
+      #fcce30 66.6%,
+      #58554b 66.6%,
+      #58554b
+    )
+    bottom no-repeat;
+  background: linear-gradient(
+      to right,
+      #e3612c 0,
+      #e3612c 33.3%,
+      #fcce30 33.3%,
+      #fcce30 66.6%,
+      #58554b 66.6%,
+      #58554b
+    )
+    bottom no-repeat;
+  background-size: 70% 5px;
+}
+.contAutNav:hover {
+  background-size: 100% 5px;
+}

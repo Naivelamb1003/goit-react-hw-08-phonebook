@@ -1,12 +1,9 @@
 .nav {
-  text-align: left;
-  margin-top: 25px;
-  margin-left: 15px;
-  width: 200px;
+  text-align: right;
 }
 .link {
   text-decoration: none;
-  color: #0a1213;
+  color: #000000;
   background: -webkit-linear-gradient(
       right,
       #e3612c 0,

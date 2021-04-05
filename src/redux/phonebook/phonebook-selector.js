@@ -1,7 +1,7 @@
 import { createSelector } from "@reduxjs/toolkit";
 
-const getLoading = (state) => state.loading;
-const getError = (state) => state.error;
+const getLoading = (state) => state.phonebook.loading;
+const getError = (state) => state.phonebook.error;
 
 const getContacts = (state) => state.phonebook.contacts;
 

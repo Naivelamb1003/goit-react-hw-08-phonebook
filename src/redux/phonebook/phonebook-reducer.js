@@ -40,7 +40,7 @@ const filter = createReducer("", {
   [changeFilter]: (_, { payload }) => payload,
 });
 
-const error = createReducer("NO_error", {
+const error = createReducer(null, {
   [addContactError]: (_, { payload }) => payload,
   [fetchContactError]: (_, { payload }) => payload,
   [deleteContactError]: (_, { payload }) => payload,

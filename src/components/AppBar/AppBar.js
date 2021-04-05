@@ -7,6 +7,7 @@ import { connect } from "react-redux";
 const AppBar = ({ isAuthenticated }) => (
   <header>
     <Navigation />
+
     {isAuthenticated ? <UserMenu /> : <AuthNavigation />}
   </header>
 );

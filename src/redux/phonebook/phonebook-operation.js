@@ -15,9 +15,9 @@ import {
 axios.defaults.baseURL = "https://goit-phonebook-api.herokuapp.com/";
 
 const isContactNew = (state, name) => {
-  console.log(state);
-  console.log(name);
-  if (state.map((c) => c.name.toLowerCase()).includes(name.toLowerCase())) {
+  if (
+    state.map((c) => c.name.toLowerCase()).includes(name.trim().toLowerCase())
+  ) {
     throw new Error("Contact already exist");
   }
   return true;
